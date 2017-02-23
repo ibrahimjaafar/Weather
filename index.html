@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+   <nav>
+    <section class="row">
+   
+      <section class="col-12 col-m-12 col-c-12">
+        <ul>
+		
+      
+			<li>
+			  <form id="frm1">
+			<input type="text" name="fname"><br>
+			<input type="button" class="sub" onclick="getCity();getCityy()" value="Enter">
+			</form>
+			</li>
+			
+			</ul>
+			     <ul class="pull-left">
+           <li>
+            <button class="change" onclick="toDeg();toDegg()">C°</button>
+          </li>
+          <li>
+           <button class="change" onclick="toF();toFF()">F°</button>
+          </li>
+        </ul>
+		
+      </section>
+	  
+    </section>
+  </nav>
+
+    <section class="row col-12 col-c-12 col-m-12">
+ <p></p>
+ </section>
+
+ <section class="row col-12 col-c-12 col-m-12">
+ <p></p>
+ </section>
+ <section class="row col-12 col-c-12 col-m-12">
+ <p></p>
+ </section>
+
+ <section class="row col-12 col-c-12 col-m-12">
+ <p></p>
+ </section>
+      
+	  <section class="col-12 col-c-12 col-m-6" id="city">
+          
+		  <h2 class="text-center data" id="cityText"></h2>
+		
+          <h1 class= " temp" id="tempText"></h1>
+         
+     
+          <h1 class=" " id="windText"></h1>
+      
+          <h1 class="  " id="humidityText"></h1>
+            <figure ><img  src="something.png " alt="" id="weatherImg" ></figure>
+		    <h3 class="data" id="weatherText"></h3>
+    
+      </section>
+	
+        <section class="row">
+	  
+		 <section class="im1 col-3 col-c-12 col-m-12  " >
+       
+          <h3></h3>
+        </section>
+		<section class="graph col-8 col-c-12 col-m-12  " >
+		
+   <svg viewBox="0 0 500 120" class="svg col-12 col-c-12 col-m-12">
+	  
+ <polyline id="pd" 
+     fill="none"
+     stroke="#ffffff"
+     stroke-width="1"
+     points="
+       
+	   
+       "
+	   />
+	  
+	   
+	   
+	   <text class="fsize" x="" y=""  id="n0"></text><text class="fsize" x="" y=""  id="n1"></text>
+	   <text class="fsize" x="" y=""  id="n2"></text><text class="fsize" x="" y=""  id="n3"></text>
+	   <text class="fsize" x="" y=""  id="n4"></text><text class="fsize" x="" y=""  id="n5"></text>
+	   <text class="fsize" x="" y=""  id="n6"></text><text class="fsize" x="" y=""  id="n7"></text> 
+	   
+	   <text class="ffsize" x="" y=""  id="l0"></text><text class="ffsize" x="" y=""  id="l1"></text>
+	   <text class="ffsize" x="" y=""  id="l2"></text><text class="ffsize" x="" y=""  id="l3"></text>
+	   <text class="ffsize" x="" y=""  id="l4"></text><text class="ffsize" x="" y=""  id="l5"></text>
+	   <text class="ffsize" x="" y=""  id="l6"></text><text class="ffsize" x="" y=""  id="l7"></text> 
+	   
+	 
+       <text class="ffsize v" x="10" y="7" id="tempTextt0"></text><text class="ffsize v" x="65" y="7" id="tempTextt1"></text>
+		<text class="ffsize v" x="120" y="7" id="tempTextt2"></text><text class="ffsize v" x="175" y="7" id="tempTextt3"></text>
+		<text class="ffsize v" x="230" y="7" id="tempTextt4"></text><text class="ffsize v" x="285" y="7" id="tempTextt5"></text>
+	   <text class="ffsize v" x="340" y="7" id="tempTextt6"></text><text class="ffsize v" x="395" y="7" id="tempTextt7"></text>
+	   
+	   <text class="ffsize v" x="10" y="15" id="windTextt0"></text><text class="ffsize v" x="65" y="15" id="windTextt1"></text>
+		<text class="ffsize v" x="120" y="15" id="windTextt2"></text><text class="ffsize v" x="175" y="15" id="windTextt3"></text>
+		<text class="ffsize v" x="230" y="15" id="windTextt4"></text><text class="ffsize v" x="285" y="15" id="windTextt5"></text>
+	   <text class="ffsize v" x="340" y="15" id="windTextt6"></text><text class="ffsize v" x="395" y="15" id="windTextt7"></text>
+</svg>
+</section>
+ 
+		
+
+			
+ </section>
+	<section class = "row3">
+	
+      <section class="row2">
+	  	
+       
+		<section class=" col-2 col-c-6 col-m-1  " >
+		<p id = "day0"></p>
+        <figure class = "icon"><img  src="something.png " alt="" id="weatherImg0" ></figure><h5 class=" data" id="tempText0"></h5> <h5 class="data" id="windText0" ></h5><h5 class="hum data" id="humidityText0" ></h5></section>
+		
+		<section class="col-2 col-c-6 col-m-1  " >
+		<p id = "day1"></p>
+		<figure class = "icon" > <img  src="something.png " alt="" id="weatherImg1" > </figure><h5 class="data" id="tempText1"></h5><h5 class=" data" id="windText1"></h5><h5 class="hum data" id="humidityText1" ></h5></section>
+		
+		 <section class=" col-2 col-c-6 col-m-1  " >
+		 <p id = "day2"></p>
+		<figure class = "icon" > <img  src="something.png " alt="" id="weatherImg2" ></figure> <h5 class="data" id="tempText2"></h5><h5 class="data" id="windText2"></h5><h5 class="hum data" id="humidityText2" ></h5></section>
+		
+		 <section class=" col-2 col-c-6 col-m-1  " >
+		 <p id = "day3"></p>
+		<figure class = "icon" > <img  src="something.png " alt="" id="weatherImg3" > </figure><h5 class="data" id="tempText3"></h5><h5 class="data" id="windText3"></h5><h5 class="hum data" id="humidityText3" ></h5></section>
+		
+		 <section class="col-2 col-c-12 col-m-1  " >
+		 <p id = "day4"></p>
+		<figure class = "icon" > <img  src="something.png " alt="" id="weatherImg4" > </figure><h5 class="data" id="tempText4"></h5><h5 class=" data" id="windText4"></h5><h5 class="hum data" id="humidityText4" ></h5></section>
+		
+	
+     
+	
+		
+		
+	
+		
+       
+	
+      </section>
+	
+		  
+ </section>
+	  	
+      
+		
+
+<!-- Five day forecast -->
+
+  
+	
+  
+ 
+    
+       
+  
+ 
+ <script src="forecast.js"></script>
+ <script src="weather.js"></script>
+</body>
+
+</html>
