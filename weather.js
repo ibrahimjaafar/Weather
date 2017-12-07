@@ -10,11 +10,7 @@ function getCityWeather(city){
 	
 	xmlhttp.onreadystatechange = function(){
 		if (xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200){
-
-			
-			resp = JSON.parse(xmlhttp.responseText);
-
-      
+		resp = JSON.parse(xmlhttp.responseText);
 		//city name
         document.getElementById("cityText").innerHTML = resp.name + ", " + resp.sys.country;
       
@@ -31,27 +27,28 @@ function getCityWeather(city){
         var fahr = (resp.main.temp * 9 / 5) - 459.67;
         var cels = (resp.main.temp - 273.15);
       
-	document.getElementById("tempText").innerHTML = cels.toFixed(1) + " C&deg";     
-	toDegg = function(){
+		document.getElementById("tempText").innerHTML = cels.toFixed(1) + " C&deg";     
+		toDegg = function(){
 		 document.getElementById("tempText").innerHTML = cels.toFixed(1) + " C&deg";
-	 } 
-	 toFF = function(){
+		} 
+		toFF = function(){
           document.getElementById("tempText").innerHTML = fahr.toFixed(0) + " F&deg";
 	  }
      //weather icons
     
-     var imgURL = "Weather/" + resp.weather[0].main+".png";
-        document.getElementById("weatherImg").src = imgURL;
-        document.getElementById("weatherText").innerHTML = resp.weather[0].description;
-         
+		var imgURL = "Weather/" + resp.weather[0].main+".png";
+			document.getElementById("weatherImg").src = imgURL;
+			document.getElementById("weatherText").innerHTML = resp.weather[0].description;
+			
 	}}
 	
 	xmlhttp.open("GET", api, true);
-		xmlhttp.send();
+	xmlhttp.send();
  
 
 }
 getCityWeather("toronto");
+//Get City Input
 getCity = function (){
 	var x = document.getElementById("frm1");
     var text = "";
