@@ -94,11 +94,10 @@ body,section,h1,h2,h3,h4,h5,p{
 body {
 	font-size: 18px;
 	font-weight: 400;
+	background-color: #1a809c;
 	line-height: 30px;
 	color: #fff;
 	margin-top: 100px;
-	background-color: #4b5156;
-	background:url("Weather/day2.png")no-repeat fixed ;
 }
 
 /* For mobile phones: */
